@@ -1,0 +1,11 @@
+[Unit]
+Description=Cargen Branch remind Module
+After=network.target
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=dev
+ExecStart=/usr/local/bin/python3.7  /home/dev/cg_remind/main.py
+[Install]
+WantedBy=multi-user.target
