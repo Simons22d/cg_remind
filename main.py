@@ -1,14 +1,6 @@
-# from flask import Flask
-# from flask_cors import CORS
 import datetime
-# import random
 import time
 import requests
-
-# app = Flask()
-# cors = CORS(app)
-# app.config["SECRET_KEY"] = random.getrandbits(512)
-
 
 def time_in_range(start, end, x):
     """Return true if x is in the range [start, end]"""
@@ -30,11 +22,3 @@ while True:
         time.sleep(60*30)
         requests.post("http://localhost:9000/send/email/reminder")
 
-
-
-
-
-# # Press the green button in the gutter to run the script.
-# if __name__ == '__main__':
-#     app.run(app, 10000, debug=True)
-# # See PyCharm help at https://www.jetbrains.com/help/pycharm/
