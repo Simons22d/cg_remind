@@ -19,6 +19,8 @@ while True:
     sec = int(now.strftime("%S"))
     x = datetime.time(hr,min,sec)
     if time_in_range(start,end ,x):
-        time.sleep(60*30)
+        print("its time.")
+        time.sleep(60)
         requests.post("http://localhost:9000/send/email/reminder")
-
+    else:
+        print("Its Not Time.")
