@@ -21,6 +21,6 @@ while True:
     if time_in_range(start,end ,x):
         print("its time.")
         time.sleep(60)
-        requests.post("http://localhost:9000/send/email/reminder")
+        requests.post("http://192.168.12.200:9000/send/email/reminder")
     else:
         print("Its Not Time.")
