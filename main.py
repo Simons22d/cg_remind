@@ -11,6 +11,10 @@ def time_in_range(start, end, x):
         return start <= x or x <= end
 
 
+def is_week_day(this_day):
+    return True if  datetime.datetime.isoweekday(this_day) <= 5 else False
+
+
 while True:
     now = datetime.datetime.now()
     start = datetime.time(8, 0, 0)
@@ -19,9 +23,11 @@ while True:
     min = int(now.strftime("%M"))
     sec = int(now.strftime("%S"))
     x = datetime.time(hr, min, sec)
-    if time_in_range(start, end, x):
+    print("•••••••••••••")
+    if time_in_range(start, end, x) and is_week_day(now):
         print("its time.")
         time.sleep(60*30)
         requests.post("http://192.168.12.200:9000/send/email/reminder")
     else:
         print("Its Not Time.")
+
