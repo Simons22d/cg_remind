@@ -26,8 +26,8 @@ while True:
     print("•••••••••••••")
     if time_in_range(start, end, x) and is_week_day(now):
         print("its time.")
-        time.sleep(60*30)
         requests.post("http://192.168.12.200:9000/send/email/reminder")
+        time.sleep(60 * 30)
     else:
         print("Its Not Time.")
 
