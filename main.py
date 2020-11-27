@@ -14,7 +14,7 @@ def time_in_range(start, end, x):
 while True:
     now = datetime.datetime.now()
     start = datetime.time(8, 0, 0)
-    end = datetime.time(11, 0, 0)
+    end = datetime.time(16, 0, 0)
     hr = int(now.strftime("%H"))
     min = int(now.strftime("%M"))
     sec = int(now.strftime("%S"))
